@@ -1,0 +1,10 @@
+version: '2.4'
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins:2.319.3-lts-jdk11
+    ports:
+      - "8880:8080"
+      - "50000:50000"
+    volumes:
+      - /home/panda/jenkins:/var/jenkins_home
